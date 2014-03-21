@@ -1,0 +1,16 @@
+EXPORTS
+;--------------------------------------------------------------------
+; Core exports provided by the ExtCpp framework.
+;--------------------------------------------------------------------
+	DebugExtensionInitialize
+	DebugExtensionUninitialize		
+	execute
+	ex
+	help	
+	clearscriptsession
+	debug
+;--------------------------------------------------------------------
+; Extension commands.
+;--------------------------------------------------------------------
+
+    

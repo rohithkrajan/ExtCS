@@ -1,0 +1,152 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9096A792-A155-4A83-899E-5F32A79A1978}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ExtCS</RootNamespace>
+    <AssemblyName>ExtCS.Debugger</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <DocumentationFile>bin\x64\Debug\ExtCS.Debugger.XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Roslyn.Compilers">
+      <HintPath>..\packages\Roslyn.Compilers.Common.1.2.20906.2\lib\net45\Roslyn.Compilers.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Roslyn.Compilers.CSharp">
+      <HintPath>..\packages\Roslyn.Compilers.CSharp.1.2.20906.2\lib\net45\Roslyn.Compilers.CSharp.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Helpers\ArgumentsHelper.cs" />
+    <Compile Include="Helpers\RegexHelper.cs" />
+    <Compile Include="Helpers\Utilities.cs" />
+    <Compile Include="ScriptObjects\Address.cs" />
+    <Compile Include="ScriptObjects\CLRObject.cs" />
+    <Compile Include="Debugger.cs" />
+    <Compile Include="Engines\DebuggerScriptEngineSession.cs" />
+    <Compile Include="DotnetDbg\DebugBaseEventCallbacks.cs" />
+    <Compile Include="DotnetDbg\DebugBaseEventCallbacksWide.cs" />
+    <Compile Include="DotnetDbg\Enums.cs" />
+    <Compile Include="DotnetDbg\IDebugAdvanced.cs" />
+    <Compile Include="DotnetDbg\IDebugAdvanced2.cs" />
+    <Compile Include="DotnetDbg\IDebugAdvanced3.cs" />
+    <Compile Include="DotnetDbg\IDebugBreakpoint.cs" />
+    <Compile Include="DotnetDbg\IDebugBreakpoint2.cs" />
+    <Compile Include="DotnetDbg\IDebugBreakpoint3.cs" />
+    <Compile Include="DotnetDbg\IDebugClient.cs" />
+    <Compile Include="DotnetDbg\IDebugClient2.cs" />
+    <Compile Include="DotnetDbg\IDebugClient3.cs" />
+    <Compile Include="DotnetDbg\IDebugClient4.cs" />
+    <Compile Include="DotnetDbg\IDebugClient5.cs" />
+    <Compile Include="DotnetDbg\IDebugControl.cs" />
+    <Compile Include="DotnetDbg\IDebugControl2.cs" />
+    <Compile Include="DotnetDbg\IDebugControl3.cs" />
+    <Compile Include="DotnetDbg\IDebugControl4.cs" />
+    <Compile Include="DotnetDbg\IDebugControl5.cs" />
+    <Compile Include="DotnetDbg\IDebugControl6.cs" />
+    <Compile Include="DotnetDbg\IDebugDataSpaces.cs" />
+    <Compile Include="DotnetDbg\IDebugDataSpaces2.cs" />
+    <Compile Include="DotnetDbg\IDebugDataSpaces3.cs" />
+    <Compile Include="DotnetDbg\IDebugDataSpaces4.cs" />
+    <Compile Include="DotnetDbg\IDebugEventCallbacks.cs" />
+    <Compile Include="DotnetDbg\IDebugEventCallbacksWide.cs" />
+    <Compile Include="DotnetDbg\IDebugInputCallbacks.cs" />
+    <Compile Include="DotnetDbg\IDebugOutputCallbacks.cs" />
+    <Compile Include="DotnetDbg\IDebugOutputCallbacks2.cs" />
+    <Compile Include="DotnetDbg\IDebugOutputCallbacksWide.cs" />
+    <Compile Include="DotnetDbg\IDebugRegisters.cs" />
+    <Compile Include="DotnetDbg\IDebugRegisters2.cs" />
+    <Compile Include="DotnetDbg\IDebugSymbolGroup.cs" />
+    <Compile Include="DotnetDbg\IDebugSymbolGroup2.cs" />
+    <Compile Include="DotnetDbg\IDebugSymbols.cs" />
+    <Compile Include="DotnetDbg\IDebugSymbols2.cs" />
+    <Compile Include="DotnetDbg\IDebugSymbols3.cs" />
+    <Compile Include="DotnetDbg\IDebugSymbols4.cs" />
+    <Compile Include="DotnetDbg\IDebugSymbols5.cs" />
+    <Compile Include="DotnetDbg\IDebugSystemObjects.cs" />
+    <Compile Include="DotnetDbg\IDebugSystemObjects2.cs" />
+    <Compile Include="DotnetDbg\Structs.cs" />
+    <Compile Include="ScriptObjects\Extension.cs" />
+    <Compile Include="ListCommandHelper\DataHelper.cs" />
+    <Compile Include="ListCommandHelper\ICommand.cs" />
+    <Compile Include="ListCommandHelper\IResult.cs" />
+    <Compile Include="ListCommandHelper\ListCommand.cs" />
+    <Compile Include="ListCommandHelper\XmlDataHelper.cs" />
+    <Compile Include="ManagedExtCS.cs" />
+    <Compile Include="Helpers\OptionSet.cs" />
+    <Compile Include="Handlers\OutputHandler.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ScriptContext.cs" />
+    <Compile Include="Extensions\StringExtensions.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
