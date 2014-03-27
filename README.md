@@ -10,19 +10,19 @@ If you want to automate the debugger but dislike the WinDbg built-in script ,now
 
 ### Supported Features
 
-Supports all the windows debugging tools (cdb.exe, ntsd.exe , windbg.exe etc.)
-Visual Studio Editor support –Write your scripts in VS with intellisense goodness
-Complete debugging support. Just give break point in the C# script and attach VS to windbg to do debugging.
-Support for kernel mode debugging(still in early beta )
-REPL support –You can use your debugger to execute C# statements write on the command window
-support for 32bit and 64 bit .Scripts require very minimal change or no change at all to run on 32 or 64 bit dumps
+- upports all the windows debugging tools (cdb.exe, ntsd.exe , windbg.exe etc.)
+- Visual Studio Editor support –Write your scripts in VS with intellisense goodness
+- Complete debugging support. Just give break point in the C# script and attach VS to windbg to do debugging.
+- Support for kernel mode debugging(still in early beta )
+- REPL support –You can use your debugger to execute C# statements write on the command window
+- support for 32bit and 64 bit .Scripts require very minimal change or no change at all to run on 32 or 64 bit dumps
 
 ### Quick start
 
-*Install debugging tools http://msdn.microsoft.com/en-us/library/windows/hardware/gg463009.aspx
-*Install Visual C++ 2012 resitributable http://www.microsoft.com/en-us/download/details.aspx?id=30679
-*Download and extract the extension dlls to windbg directory ExtCS 0.5 Beta
-*Load extension in WinDbg: .load extcs
+* Install debugging tools http://msdn.microsoft.com/en-us/library/windows/hardware/gg463009.aspx
+* Install Visual C++ 2012 resitributable http://www.microsoft.com/en-us/download/details.aspx?id=30679
+* Download and extract the extension dlls to windbg directory ExtCS 0.5 Beta
+* Load extension in WinDbg: .load extcs
 *Execute the script: !execute -file c:\scripts\aspxpages.csx
 
 Here’s another simple example of what this extension does:
