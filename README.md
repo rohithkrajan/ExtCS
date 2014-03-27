@@ -29,7 +29,7 @@ Here’s another simple example of what this extension does:
 
 !execute –file c:\scripts\heapstat.csx
 
-'''cs
+```cs
 //contents of heapstat.csx
 #r "C:\Program Files\Debugging Tools for Windows (x64)\ExtCS.Debugger.dll"
 #r "System.Data"
